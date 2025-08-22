@@ -1,0 +1,579 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+:root {
+    --color1: #5f7163;
+    --color2: #6e8976;
+    --color3: #f2e9d8;
+    --color4: #d2c7c1;
+    --light: #ffffff;
+    --dark: #000000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    height: 100%;
+}
+
+*::selection {
+    background-color: var(--color2);
+    color: var(--color3);
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    display: none;
+    background-color: var(--color1);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--color2);
+    border-radius: 14px;
+}
+
+.bg-color1 {
+    background-color: var(--color1);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+input[type="time"],
+input[type="number"],
+textarea {
+    background-color: #ffffff;
+    border-radius: 10.4px;
+    color: #64728c;
+    display: inline-block;
+    grid-area: auto;
+    line-height: 18px;
+    padding: 10.8px 8px;
+    border: 1px solid #d4d5d6;
+    width: 100%;
+    font-size: 14px !important;
+}
+
+input:disabled,
+textarea:disabled {
+    background-color: #e9ecef;
+}
+
+input:focus,
+textarea:focus,
+.form-select:focus {
+    outline: 1px solid #c9cacc;
+}
+
+.form-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #d4d5d6;
+    padding: 10.8px 8px;
+    font-size: 14px;
+    color: #64728c;
+    border-radius: 10.4px;
+}
+
+.form-select:focus {
+    border-color: #64728c;
+    outline: 0;
+    box-shadow: 0 0 3px 1px #64728c;
+}
+
+.bg-warning,
+.btn-warning {
+    background-color: var(--color3) !important;
+}
+
+.btn-warning {
+    border-color: var(--color3);
+}
+
+.btn-warning:hover,
+.btn-warning:focus {
+    border-color: var(--color3) !important;
+}
+
+.btn-primary {
+    background-color: var(--color1) !important;
+    transition: 1s;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: none;
+    color: var(--color3);
+    font-weight: 600;
+    transition: 1s;
+    outline: 1px solid var(--color3) !important;
+}
+
+.btn-primary:active,
+.btn-primary:focus {
+    background-color: var(--color1) !important;
+}
+
+/* Navbar */
+.navbar-bot {
+    box-shadow: 0px 4px 8px 0px #888888;
+}
+
+#navTop a {
+    font-size: 12.8px;
+}
+
+.navbar li .nav-link {
+    color: var(--light);
+    font-weight: 700;
+    font-size: 12.8px;
+}
+
+.navbar .navbar-brand img {
+    height: 93px;
+}
+
+.sticky-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #5f7163e1;
+}
+
+.main-container .banner {
+    background-image: url(../images/banner1.jpg);
+    position: relative;
+    height: 50rem;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container .banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(15, 15, 15, 0.603);
+}
+
+.main-container form,
+.main-container .box-container {
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.main-container form h1,
+.main-container form h3 {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+}
+
+.main-container form input,
+.main-container form button,
+.main-container form .alert {
+    width: 20%;
+}
+
+.main-container form .alert {
+    margin: auto;
+    margin-top: 20px;
+}
+
+.landing-pg .nav-link.active {
+    font-weight: bold;
+    color: var(--dark);
+    background-color: var(--color3);
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+
+.user-pg .nav-link.active {
+    font-weight: bold;
+    color: var(--dark);
+    background-color: var(--color3);
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 42px;
+}
+
+.card-container .card {
+    border-radius: 10px;
+    filter: drop-shadow(0 5px 10px 0 #ffffff);
+    width: 400px;
+    height: 180px;
+    padding: 20px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in;
+    text-align: center;
+    justify-content: center;
+}
+
+.card-container .card.features {
+    background-color: var(--light);
+}
+
+.card-container .card.hiw {
+    background-color: var(--color1);
+    color: var(--light);
+}
+
+.card-container .card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -15px;
+    right: -15px;
+    background-color: var(--color1);
+    height: 220px;
+    width: 25px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+}
+
+.card-container .card.features::before {
+    background-color: var(--color2);
+}
+
+.card-container .card.hiw::before {
+    background: #ffffff;
+}
+
+.card-container .card:hover::before {
+    transition-delay: 0.2s;
+    transform: scale(40);
+}
+
+.card-container .card.features:hover {
+    color: #ffffff;
+    text-shadow: 0px 0px 10px rgb(0 0 0);
+}
+
+.card-container .card.hiw:hover {
+    color: #000000;
+    text-shadow: 0px 0px 10px var(--color1);
+}
+
+.card-container .card-title {
+    font-weight: 700;
+}
+
+.card-container .card p {
+    padding: 10px 0;
+    margin-bottom: 0;
+}
+
+/* Footer */
+section {
+    padding: 16px 0;
+}
+
+#footer {
+    background: var(--color1);
+}
+
+#footer h5 {
+    padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Modal Login */
+.modal {
+    font-size: 14px;
+}
+
+.modal-content {
+    border-radius: 20px;
+    background-color: var(--color2);
+}
+
+.modal-header {
+    border: none;
+    padding-bottom: 0;
+}
+
+.btn-warning {
+    width: 100%;
+    font-size: 14px;
+}
+
+.form-control:focus {
+    border-color: var(--color2) !important;
+    box-shadow: 0 0 8px 0px var(--color2) !important;
+}
+
+/* User Table */
+.table-container,
+.calendar-container {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 15px;
+    font-size: 14px;
+    height: 100%;
+}
+
+.table-container button {
+    font-size: 14px;
+}
+
+.table-container .dt-input {
+    margin: 0 12px !important;
+}
+
+#dt-search-0 {
+    width: 315px;
+}
+
+#subjectsTable_wrapper .dt-layout-row:last-child,
+#schedulesTable_wrapper .dt-layout-row:last-child {
+    display: none;
+}
+
+#subjectsTable tbody td:first-child {
+    text-align: center;
+}
+
+#sectionsModal tbody td:last-child {
+    text-align: center;
+}
+
+.modal .fa-solid.fa-square-xmark {
+    cursor: pointer;
+    font-size: 19px;
+    color: red;
+}
+
+/* Calendar */
+.calendar-day {
+    font-weight: 600;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    color: #000000;
+    text-wrap: wrap;
+    width: 100%;
+    cursor: pointer;
+}
+
+#fc-dom-1 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.fc-col-header-cell-cushion,
+.fc-daygrid-day-number {
+    text-decoration: none;
+    color: #000000;
+}
+
+.calendar-day p {
+    margin: 0;
+}
+
+/* Modal Effects */
+@keyframes unfoldIn {
+    0% {
+        transform: scaleY(0.01) scaleX(0);
+    }
+    50% {
+        transform: scaleY(0.01) scaleX(1);
+    }
+    100% {
+        transform: scaleY(1) scaleX(1);
+    }
+}
+
+@keyframes unfoldOut {
+    0% {
+        transform: scaleY(1) scaleX(1);
+    }
+    50% {
+        transform: scaleY(0.01) scaleX(1);
+    }
+    100% {
+        transform: scaleY(0.01) scaleX(0);
+    }
+}
+
+.modal.fade .modal-dialog {
+    transform: scaleY(0.01) scaleX(0);
+    animation: unfoldIn 0.5s ease-in-out forwards;
+}
+
+.modal.fold-out .modal-dialog {
+    animation: unfoldOut 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+/* Animation */
+@keyframes shakeTop {
+    0%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 50% 0;
+    }
+
+    10% {
+        transform: rotate(2deg);
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: rotate(-4deg);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: rotate(4deg);
+    }
+
+    80% {
+        transform: rotate(-2deg);
+    }
+
+    90% {
+        transform: rotate(2deg);
+    }
+}
+
+.animation-zoom-in {
+    animation: zoomIn 2.8s forwards;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animation-left {
+    animation: moveFromLeft 1s forwards;
+}
+
+@keyframes moveFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animation-right {
+    animation: moveFromRight 1s forwards;
+}
+
+@keyframes moveFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animation-downwards {
+    animation: moveDownwards 1s forwards;
+}
+
+@keyframes moveDownwards {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animation-upwards {
+    animation: moveUpwards 1s forwards;
+}
+
+@keyframes moveUpwards {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animation-fade-in {
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
